@@ -23,7 +23,7 @@ class modeloUsuarios{
         }
     }
     public function login($correo, $pass){
-        $query = $this->db->query("SELECT * FROM usuarios WHERE correo = '$correo' ");
+        $query = $this->db->query("SELECT * FROM usuarios WHERE correo = '$correo'");
         $resultado = $query->fetch_object();
 
         $hashed_pass = $resultado->pass;
@@ -35,6 +35,10 @@ class modeloUsuarios{
     }
     public function buscarUsuario($id_usr){
         $query = "SELECT nombre, correo, rol FROM usuarios WHERE id = '$id_usr'";
+        return $this->db->resultquery($query);
+    }
+    public function getCategorias(){
+        $query = "SELECT * FROM categorias ORDER BY id ASC";
         return $this->db->resultquery($query);
     }
 }

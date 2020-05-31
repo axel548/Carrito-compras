@@ -8,7 +8,7 @@ class Usuarios extends Controlador{
         if ($this->checarLogueo()) {
 			redirect('inicio');
 		}else{
-            $this->vista('usuarios/index');
+            $this->vista('usuarios/login');
 		}
     }
     public function registro(){
@@ -34,6 +34,18 @@ class Usuarios extends Controlador{
                 'imagRe' => $imgRecup
             ];
             $this->vista('usuarios/slider', $data);
+        }
+        else{
+            $this->vista('inicio/index');
+        }
+    }
+    public function productos(){
+        if (!$this->checarLogueo()) {
+            $gtCategori = $this->modeloUsuario->getCategorias();
+            $data = [
+                'GetCateg' => $gtCategori
+            ];
+            $this->vista('usuarios/productos', $data);
         }
         else{
             $this->vista('inicio/index');
@@ -68,23 +80,24 @@ class Usuarios extends Controlador{
             'pass' => trim($_POST['pass'])
         ];
         $usuario_logueado = $this->modeloUsuario->login($data['correo'], $data['pass']);
+        //cambia
         if ($usuario_logueado) {
             $this->crearSesionDeUsuario($usuario_logueado);
         }else {
             $this->vista('usuarios/login');
         }
     }
-    public function crearSesionDeUsuario($user){
-        $_SESSION['id_usuario'] = $user->id;
-        $id_usr = $user->id;
-        $usrbusc = $this->modeloUsuario->buscarUsuario($id_usr);
-        $data = [
-            'usuario' => $usrbusc
-        ];
-        foreach($data['usuario'] as  $_SESSION['usr']){
-        }
+    public function crearSesionDeUsuario($user){       
+            $_SESSION['id_usuario'] = $user->id;
+            $id_usr = $user->id;
+            $usrbusc = $this->modeloUsuario->buscarUsuario($id_usr);
+            $data = [
+                'usuario' => $usrbusc
+            ];
+            foreach($data['usuario'] as $_SESSION['usr']){
+            }
+            redirect('alertas/entro');
         //redirect('publicaciones');
-        redirect('alertas/entro');
     }
     public function salir(){
         unset($_SESSION['id_usuario']);

@@ -25,7 +25,7 @@ class Core{
         $this->parametros = $url ? array_values($url) : [];
 
         //retornar un array de parametros
-        call_user_func_array([$this->controlador,$this->metodo],$this->parametros);
+        call_user_func_array([$this->controlador,$this->metodo], $this->parametros);
     }
 
     public function url(){

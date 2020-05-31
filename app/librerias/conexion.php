@@ -4,7 +4,7 @@ class conexion{
     private $user = USER;
     private $pass = PASS;
     private $dbname = NAME;
-    private $rows = array();
+    protected $rows = array();
     private $dbh;
 
     public function __construct(){

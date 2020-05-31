@@ -83,6 +83,9 @@
             <li class="nav-item">
                 <a class="nav-link" href="<?php echo RUTAPUBLIC; ?>/usuarios/slider"><ion-icon name="pricetags"></ion-icon> Artículos</a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="<?php echo RUTAPUBLIC; ?>/usuarios/productos"><ion-icon name="pricetags"></ion-icon> Productos</a>
+            </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Usuarios

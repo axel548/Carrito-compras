@@ -24,4 +24,5 @@
         <?php endforeach ?>
     </div>
 </div>
+
 <?php require RUTAAPP . '/vistas/include/footer.php'; ?>
