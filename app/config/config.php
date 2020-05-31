@@ -18,7 +18,7 @@ define("RUTAAPP",dirname(dirname(__FILE__)));
 //url para acceder a la carpeta public
 //define("RUTAPUBLIC", "http://localhost/mvc");
 
-define("RUTAPUBLIC", "https://axewes.website/mvc");
+define("RUTAPUBLIC", "https://www.axewes.website/mvc");
 
 define("RUTAIMG", dirname(dirname(dirname(__FILE__))));
 
