@@ -21,7 +21,7 @@
                 </thead>
             <?php foreach ($data['imagenRec'] as $RecImagen): ?>
                 <tr>
-                    <td><img src="<?php echo RUTAPUBLIC; ?>/public/uploads/<?php echo $RecImagen->imagen; ?>" style="width:240px;"> </td>
+                    <td><img src="<?php echo RUTAPUBLIC; ?>/public/uploads/<?php echo $RecImagen->imagen_carousel; ?>" style="width:240px;"> </td>
                     <td>
                         <?php echo $RecImagen->titulo_imagenes; ?>
                     </td>

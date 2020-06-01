@@ -50,7 +50,7 @@
                      </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href=" <?php echo RUTAPUBLIC; ?>/categoria/index">Gestionar Categorías</a>
-                    <a class="dropdown-item " href="">Gestionar Productos</a>
+                    <a class="dropdown-item " href=" <?php echo RUTAPUBLIC; ?>/Productos/index">Gestionar Productos</a>
                     <a class="dropdown-item " href="">Gestionar Pedidos</a>
                 </div>
             </li>

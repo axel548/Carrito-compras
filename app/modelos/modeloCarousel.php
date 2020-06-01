@@ -12,7 +12,7 @@ class modeloCarousel{
         $id = $data['id_usuario'];
         $imagen = $data['imagen'];
         $hoy = date('Y-m-d H:i:s');
-        $ins = $this->db->query("INSERT INTO imagenes VALUES(DEFAULT,'$titulo','$id','$hoy','$imagen')");
+        $ins = $this->db->query("INSERT INTO carousel VALUES(DEFAULT,'$id','$titulo','$hoy','$imagen')");
         if ($ins) {
             return true;
         }else {
@@ -20,16 +20,19 @@ class modeloCarousel{
         }
     }
     public function imagenRec(){
-        $query = "SELECT *, imagenes.id as id_imagenes,
-                    imagenes.title as titulo_imagenes,
-                        usuarios.id as id_usuario
-                        FROM  imagenes, usuarios
-                        WHERE imagenes.id_usuario = usuarios.id
-                        ORDER BY imagenes.fecha ASC;";
+        $query = "SELECT *, productos.id as id_produco,
+        productos.fecha as fecha_producto,
+       productos.nombre as nombre_producto,
+       categorias.id as id_categoria,
+       categorias.fecha as fecha_categoria,
+       categorias.nombre as nombre_categoria
+                           FROM  productos, categorias
+                           WHERE productos.categoria_id = categorias.id
+                           ORDER BY productos.fecha ASC";
         return $this->db->resultquery($query);
     } 
     public function borrarImagen($id){
-        $del = $this->db->query("DELETE FROM imagenes WHERE id = '$id' ");
+        $del = $this->db->query("DELETE FROM carousel WHERE id = '$id' ");
         if ($del) {
             return true;
         }else {

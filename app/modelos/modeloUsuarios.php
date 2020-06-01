@@ -6,7 +6,7 @@ class modeloUsuarios{
     }
 
     public function imagRp(){
-        $query = "SELECT * FROM imagenes ORDER BY fecha ASC;";
+        $query = "SELECT * FROM carousel ORDER BY fecha ASC;";
         return $this->db->resultquery($query);
     } 
     public function altaDeUsuario($data){
@@ -14,7 +14,7 @@ class modeloUsuarios{
         $correo = $data['correo'];
         $pass = $data['pass'];
 
-        $ins = $this->db->query("INSERT INTO usuarios VALUES(DEFAULT,'$nombre', '$correo', '$pass', 2)");
+        $ins = $this->db->query("INSERT INTO usuarios VALUES(DEFAULT,'$nombre', '$correo', '$pass', 2, '')");
 
         if ($ins) {
             return true;

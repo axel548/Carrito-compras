@@ -8,7 +8,7 @@ class Usuarios extends Controlador{
         if ($this->checarLogueo()) {
 			redirect('inicio');
 		}else{
-            $this->vista('usuarios/login');
+            $this->vista('usuarios/index');
 		}
     }
     public function registro(){

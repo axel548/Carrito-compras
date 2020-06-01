@@ -17,12 +17,12 @@
         <div class="card bg-light mb-3" style="max-width: 540px;">
             <div class="row no-gutters">
                 <div class="col-md-4">
-                    <img src="<?php echo RUTAPUBLIC; ?>/public/imagenes/<?php echo $post->imagen; ?>" class="card-img" alt="...">
+                    <img src="<?php echo RUTAPUBLIC; ?>/public/imagenes/<?php echo $post->imagen_publicacion; ?>" class="card-img" alt="...">
                 </div>
                 <div class="col-md-8">
                     <div class="card-body">
                         <h5 class="card-title">
-                            <?php echo $post->titulo; ?>
+                            <?php echo $post->titulo; ?>    
                         </h5>
                         <p>Creado por:
                             <?php echo $post->nombre; ?>

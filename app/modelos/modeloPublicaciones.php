@@ -6,11 +6,12 @@ class modeloPublicaciones{
     }
 
     public function selPublicaciones(){
-        $query = "SELECT *, publicaciones.id as id_publicacion,
-                            usuarios.id as id_usuario
-                            FROM  publicaciones, usuarios
-                            WHERE publicaciones.id_usuario = usuarios.id
-                            ORDER BY publicaciones.fecha DESC;";
+        $query = "SELECT *, publicaciones.imagen as imagen_publicacion,
+                            publicaciones.id as id_publicacion,
+                                    usuarios.id as id_usuario
+                                    FROM  publicaciones, usuarios
+                                    WHERE publicaciones.id_usuario = usuarios.id
+                                    ORDER BY publicaciones.fecha DESC";
         return $this->db->resultquery($query);
     } 
     public function publicacionesPorId($id){

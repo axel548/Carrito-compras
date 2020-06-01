@@ -19,7 +19,7 @@ require RUTAAPP . '/vistas/include/header.php';
                             <img src="<?php echo RUTAPUBLIC; ?>/public/uploads/<?php echo $rcpImagen->imagen; ?>" class="d-block w-100" alt="...">
                             <div class="carousel-caption d-none d-md-block">
                                 <h4>
-                                    <?php echo $rcpImagen->title; ?>
+                                    <?php echo $rcpImagen->titulo; ?>
                                 </h4>
                             </div>
                         </div>
