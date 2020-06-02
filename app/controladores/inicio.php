@@ -12,5 +12,10 @@ class Inicio extends Controlador{
             $this->vista('inicio/index');
         }
     }
+    public function error(){
+        if (isset($_SESSION['id_usuario'])) {
+            $this->vista('inicio/error'); 
+        }
+    }
 }
 ?>

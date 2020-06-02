@@ -3,7 +3,7 @@
 <script>
 swal("Bienvenido")
 .then((value) => {
-  location.href = "<?php echo RUTAPUBLIC; ?>/inicio/index";
+  location.href = "<?php echo RUTAPUBLIC; ?>/Dashboard/index";
 });
 </script>
 

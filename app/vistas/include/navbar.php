@@ -39,7 +39,7 @@
                 <ion-icon name="layers"></ion-icon>
                      </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href=" <?php echo RUTAPUBLIC; ?>/publicaciones/index">Publicaciones</a>
+                    <a class="dropdown-item" href="<?php echo RUTAPUBLIC; ?>/publicaciones/index">Publicaciones</a>
                     <a class="dropdown-item " href="<?php echo RUTAPUBLIC; ?>/carousel/index">Carousel</a>
                     <a class="dropdown-item " href="<?php echo RUTAPUBLIC; ?>/reservas/index">Reservación</a>
                 </div>
@@ -49,8 +49,8 @@
                 <ion-icon name="cart"></ion-icon>
                      </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href=" <?php echo RUTAPUBLIC; ?>/categoria/index">Gestionar Categorías</a>
-                    <a class="dropdown-item " href=" <?php echo RUTAPUBLIC; ?>/Productos/index">Gestionar Productos</a>
+                    <a class="dropdown-item" href="<?php echo RUTAPUBLIC; ?>/categoria/index">Gestionar Categorías</a>
+                    <a class="dropdown-item " href="<?php echo RUTAPUBLIC; ?>/Productos/index">Gestionar Productos</a>
                     <a class="dropdown-item " href="">Gestionar Pedidos</a>
                 </div>
             </li>
