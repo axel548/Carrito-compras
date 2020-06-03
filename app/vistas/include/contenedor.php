@@ -3,8 +3,23 @@
 <!-- Footer -->
 <footer class="sticky-footer bg-white">
     <div class="container my-auto">
+        <div class="text-center">
+            <a href="#" class="btn btn-danger btn-circle btn-lg">
+            <ion-icon name="logo-html5"></ion-icon>
+            </a>
+            <a href="#" class="btn btn-primary btn-circle btn-lg">
+            <ion-icon name="logo-css3"></ion-icon>
+            </a>
+            <a href="#" class="btn btn-warning btn-circle btn-lg">
+            <ion-icon name="logo-javascript"></ion-icon>
+            </a>
+            <a href="#" class="btn btn-secondary btn-circle btn-lg">
+            <ion-icon name="logo-npm"></ion-icon>
+            </a>        
+        </div>
+        <br>
         <div class="copyright text-center my-auto">
-            <span>Copyright &copy; Your Website 2019</span>
+            <span>Copyright &copy; AXL 2020</span>
         </div>
     </div>
 </footer>

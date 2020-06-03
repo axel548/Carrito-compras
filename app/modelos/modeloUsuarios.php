@@ -41,5 +41,9 @@ class modeloUsuarios{
         $query = "SELECT * FROM categorias ORDER BY id ASC";
         return $this->db->resultquery($query);
     }
+    public function vercat($id){
+        $query = "SELECT * FROM categorias WHERE id ='$id'";
+        return $this->db->resultquery($query);
+    }
 }
 ?>

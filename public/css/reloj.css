@@ -1,42 +1,27 @@
 /*------------------Reloj----------------------------*/
 
 .wrap {
-    width: 90%;
-    max-width: 1000px;
-    /*margin: auto;*/
-    color: #fff;
+    width: 80%;
+    color: black;
 }
 
 .widget {
     width: 100%;
-    margin: 2em;
-    /*margin: 32px;*/
+    margin: 10px;
 }
 
 .widget p {
     display: inline-block;
-    line-height: 1em;
+    line-height: 5px;
 }
 
 .fecha {
-    font-family: Oswald, Arial;
-    text-align: center;
-    font-size: 1.5em;
-    margin-bottom: 0.3125rem;
-    /*margin-bottom: 5px;*/
-    background: purple;
-    padding: 20px;
-    width: 100%;
+    font-size: 25px;
     opacity: 0.6;
 }
 
 .reloj {
-    font-family: Oswald, Arial;
-    width: 100%;
-    padding: 20px;
-    font-size: 4em;
-    text-align: center;
-    background: purple;
+    font-size: 30px;
     opacity: 0.6;
 }
 
@@ -46,6 +31,6 @@
 
 .reloj .segundos,
 .reloj .ampm {
-    font-size: 2rem;
-    display: block;
+    font-size: 30px;
+    display: inline-block;
 }

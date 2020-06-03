@@ -46,5 +46,5 @@
             <p class="lead">
                 <a href="#" class="btn btn-lg btn-secondary">Learn more</a>
             </p>
-
+    </main>
             <?php require RUTAAPP . '/vistas/include/footer.php'; ?>

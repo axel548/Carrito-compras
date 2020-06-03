@@ -3,6 +3,7 @@ class Usuarios extends Controlador{
 
     public function __construct(){
         $this->modeloUsuario = $this->modelo('modeloUsuarios');
+        $this->Helper = $this->modelo('Helpers');
     }
     public function index(){
         if ($this->checarLogueo()) {
@@ -39,13 +40,15 @@ class Usuarios extends Controlador{
             $this->vista('inicio/index');
         }
     }
-    public function productos(){
+    public function productosrandom(){
         if (!$this->checarLogueo()) {
             $gtCategori = $this->modeloUsuario->getCategorias();
+            $gtProduc = $this->Helper->getRamdon(6);
             $data = [
-                'GetCateg' => $gtCategori
+                'GetCateg' => $gtCategori,
+                'GetProduc' => $gtProduc
             ];
-            $this->vista('usuarios/productos', $data);
+            $this->vista('usuarios/productos-random', $data);
         }
         else{
             $this->vista('inicio/index');
@@ -111,6 +114,17 @@ class Usuarios extends Controlador{
         }else {
             return false;
         }
+    }
+    public function verCategoria($id){
+        $gtCategori = $this->modeloUsuario->getCategorias();
+        $verCateg = $this->modeloUsuario->vercat($id);
+        $getall = $this->Helper->getAllCategoria($id);
+        $data = [
+            'GetCateg' => $gtCategori,
+            'ver' => $verCateg,
+            'getall' => $getall
+        ];
+        $this->vista('usuarios/categproduc', $data);
     }
 }
 ?>

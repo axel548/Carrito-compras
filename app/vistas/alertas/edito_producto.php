@@ -7,4 +7,4 @@ swal("Se editó el producto.")
 });
 </script>
 
-<?php require RUTAAPP . '/vistas/include/footer.php'; ?>
+<?php require RUTAAPP . '/vistas/include/contenedor.php'; ?>

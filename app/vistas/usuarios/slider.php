@@ -61,7 +61,8 @@ require RUTAAPP . '/vistas/include/header.php';
         <button type="button" id="botData" class="btn btn-primary">Cargar Data</button>
         <br>
     </div>
-    
+
+
 
     <br><br><br>
 

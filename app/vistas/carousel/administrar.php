@@ -37,4 +37,4 @@
             <h4 class="alert alert-warning">No hay imagenes!</h4>
             <?php endif; ?>
             
-<?php require RUTAAPP . '/vistas/include/footer.php'; ?>
+<?php require RUTAAPP . '/vistas/include/contenedor.php'; ?>

@@ -1,5 +1,5 @@
-(function(){
-    var actualizarHora = function(){
+(function() {
+    var actualizarHora = function() {
         var fecha = new Date(),
             horas = fecha.getHours(),
             ampm,
@@ -11,38 +11,38 @@
             year = fecha.getFullYear();
 
         var pHoras = document.getElementById('horas');
-            pAMPM = document.getElementById('ampm');
-            pMinutos = document.getElementById('minutos');
-            pSegundos = document.getElementById('segundos');
-            pDiaSemana = document.getElementById('diaSemana');
-            pDia = document.getElementById('dia');
-            pMes = document.getElementById('mes');
-            pYear = document.getElementById('year');
+        pAMPM = document.getElementById('ampm');
+        pMinutos = document.getElementById('minutos');
+        pSegundos = document.getElementById('segundos');
+        pDiaSemana = document.getElementById('diaSemana');
+        pDia = document.getElementById('dia');
+        pMes = document.getElementById('mes');
+        pYear = document.getElementById('year');
 
-        var semana = ['Domingo','Lunes','Martes','Miercoles','Jueves','Viernes','Sabado'];
+        var semana = ['Domingo', 'Lunes', 'Martes', 'Miercoles', 'Jueves', 'Viernes', 'Sabado'];
 
         pDiaSemana.textContent = semana[diaSemana];
         pDia.textContent = dia;
 
-        var meses = ['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'];
+        var meses = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
         pMes.textContent = meses[mes];
         pYear.textContent = year;
 
         if (horas >= 12) {
             horas = horas - 12;
             ampm = 'PM';
-        }else{
+        } else {
             ampm = 'AM';
         }
 
-        if (horas == 0 ) {
+        if (horas == 0) {
             horas = 12;
         }
 
         pHoras.textContent = horas;
         pAMPM.textContent = ampm;
 
-        if (minutos < 10) { minutos = "0"+ minutos };
+        if (minutos < 10) { minutos = "0" + minutos };
         if (segundos < 10) { segundos = "0" + segundos };
 
         pMinutos.textContent = minutos;

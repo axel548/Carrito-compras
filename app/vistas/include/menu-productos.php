@@ -9,24 +9,12 @@
 
             <nav class="menu d-flex d-sm-block justify-content-center flex-wrap">
                 <?php foreach ($data['GetCateg'] as $categorias): ?>
-                <a href="#">
+                <a href="<?php echo RUTAPUBLIC; ?>/usuarios/verCategoria/<?php echo $categorias->id; ?>">
                     <ion-icon name="cart"></ion-icon><span><?php echo $categorias->nombre; ?></span></a>
                 <?php endforeach ?>
             </nav>
         </div>
         <main class="main col">
             <div class="row">
-                <div class="columna col-lg-7">  
-
-
-
-
-
-                
-                <?php require RUTAAPP . '/vistas/include/footer.php'; ?>
-                </div>
-            </div>
-        </main>
-    </div>
-</div>
-
+                <div class="columna col-lg-12">
+                    <div class="card-deck">

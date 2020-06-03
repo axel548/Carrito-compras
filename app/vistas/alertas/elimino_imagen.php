@@ -7,4 +7,4 @@ swal("La imagen ha sido eliminada.")
 });
 </script>
 
-<?php require RUTAAPP . '/vistas/include/footer.php'; ?>
+<?php require RUTAAPP . '/vistas/include/contenedor.php'; ?>

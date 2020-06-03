@@ -38,4 +38,4 @@
     </div>
 </div>
 <br>
-<?php require RUTAAPP . '/vistas/include/footer.php'; ?>
+<?php require RUTAAPP . '/vistas/include/contenedor.php'; ?>
