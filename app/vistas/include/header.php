@@ -15,9 +15,9 @@
     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css">
     <link href="<?php echo RUTAPUBLIC; ?>/public/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
     <link rel="stylesheet" href="<?php echo RUTAPUBLIC; ?>/public/vendor/fontawesome-free/css/all.min.css">
-    <?php if(isset($_SESSION['id_usuario'])):?>
-    <link rel="stylesheet" href="<?php echo RUTAPUBLIC; ?>/public/css/sb-admin-2.min.css">
-    <?php endif ?>
+        <?php if(isset($_SESSION['id_usuario']) && $_SESSION['usr']->rol=="1"):?>
+            <link rel="stylesheet" href="<?php echo RUTAPUBLIC; ?>/public/css/sb-admin-2.min.css">
+        <?php endif ?>
     <link rel="stylesheet" href="<?php echo RUTAPUBLIC; ?>/public/css/reloj.css">
     <link rel="stylesheet" href="<?php echo RUTAPUBLIC; ?>/public/css/menu.css">
 
@@ -42,9 +42,8 @@
         }
     </style>
 </head>
-<?php if(isset($_SESSION['id_usuario'])):?>
+    <?php if(isset($_SESSION['id_usuario']) && $_SESSION['usr']->rol=="1"):?>
     <body id="page-top">
-
     <!-- Page Wrapper -->
     <div id="wrapper">
         <!-- MENU-SIDEBAR -->
@@ -60,7 +59,6 @@
 
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
-
 <?php else: ?>
     <body>
     <?php require RUTAAPP . '/vistas/include/navbar.php'; ?>

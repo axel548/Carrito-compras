@@ -20,5 +20,13 @@ class Helpers{
                     ORDER BY id ASC";
         return $this->db->resultquery($query);
     }
+    public function getProduct($id){
+        $query = "SELECT * FROM productos WHERE id='$id'";
+        return $this->db->resultquery($query);
+    }
+    public function getPedido(){
+        $query = "SELECT * FROM pedidos ORDER BY id ASC";
+        return $this->db->resultquery($query);
+    }
 }
 ?>

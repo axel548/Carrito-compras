@@ -97,7 +97,7 @@
       <h6 class="collapse-header">Gestionar:</h6>
       <a class="collapse-item" href="<?php echo RUTAPUBLIC; ?>/categoria/index">Categorías</a>
       <a class="collapse-item" href="<?php echo RUTAPUBLIC; ?>/productos/index">Productos</a>
-      <a class="collapse-item" href="forgot-password.html">Pedidos</a>
+      <a class="collapse-item" href="<?php echo RUTAPUBLIC; ?>/pedido/gestioncategorias">Pedidos</a>
     </div>
   </div>
 </li>

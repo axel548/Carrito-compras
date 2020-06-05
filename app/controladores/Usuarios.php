@@ -6,6 +6,9 @@ class Usuarios extends Controlador{
         $this->Helper = $this->modelo('Helpers');
     }
     public function index(){
+        $this->vista('usuarios/index');
+    }
+    public function inicio(){
         if ($this->checarLogueo()) {
 			redirect('inicio');
 		}else{
@@ -13,53 +16,40 @@ class Usuarios extends Controlador{
 		}
     }
     public function registro(){
-        if (!$this->checarLogueo()) {
-            $this->vista('usuarios/registro');
-        }
-        else{
-            $this->vista('inicio/index');
-        }
+        $this->vista('usuarios/registro');  
     }
     public function login(){
-        if (!$this->checarLogueo()) {
+        if ($this->checarLogueo()) {
+			redirect('inicio');
+		}else{
             $this->vista('usuarios/login');
-        }
-        else{
-            $this->vista('inicio/index');
-        }
+		}
     }
     public function slider(){
-        if (!$this->checarLogueo()) {
+        if(isset($_SESSION['id_usuario']) && $_SESSION['usr']->rol=="1"){
+            $this->vista('inicio/index');
+        }else{
             $imgRecup = $this->modeloUsuario->imagRp();
             $data = [
                 'imagRe' => $imgRecup
             ];
             $this->vista('usuarios/slider', $data);
         }
-        else{
-            $this->vista('inicio/index');
-        }
     }
     public function productosrandom(){
-        if (!$this->checarLogueo()) {
-            $gtCategori = $this->modeloUsuario->getCategorias();
-            $gtProduc = $this->Helper->getRamdon(6);
-            $data = [
-                'GetCateg' => $gtCategori,
-                'GetProduc' => $gtProduc
-            ];
-            $this->vista('usuarios/productos-random', $data);
-        }
-        else{
-            $this->vista('inicio/index');
-        }
+        $gtCategori = $this->modeloUsuario->getCategorias();
+        $gtProduc = $this->Helper->getRamdon(6);
+        $data = [
+            'GetCateg' => $gtCategori,
+            'GetProduc' => $gtProduc
+        ];
+        $this->vista('usuarios/productos-random', $data);
     }
     public function contacto(){
-        if (!$this->checarLogueo()) {
-            $this->vista('usuarios/contacto');
-        }
-        else{
+        if(isset($_SESSION['id_usuario']) && $_SESSION['usr']->rol=="1"){
             $this->vista('inicio/index');
+        }else{
+            $this->vista('usuarios/contacto');
         }
     }
     public function registrarse(){
@@ -125,6 +115,13 @@ class Usuarios extends Controlador{
             'getall' => $getall
         ];
         $this->vista('usuarios/categproduc', $data);
+    }
+    public function getProduct($id){
+        $getProduc = $this->Helper->getProduct($id);
+        $data = [
+            'producto' => $getProduc
+        ];
+        $this->vista('usuarios/info_producto', $data);
     }
 }
 ?>

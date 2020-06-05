@@ -10,15 +10,25 @@
 
         <!--ul-->
         <ul class="navbar-nav mr-auto">
-            <?php if(isset($_SESSION['id_usuario'])):?>
-                <li class="nav-item">
-                    <a class="nav-link" href="<?php echo RUTAPUBLIC; ?>/buscador/index"><ion-icon name="search"></ion-icon> Search</a>
+        <?php if(isset($_SESSION['id_usuario'])):?>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <ion-icon name="person-circle"></ion-icon> Usuario
+                        </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <?php if($_SESSION['usr']->rol=="1"):?>
+                            <a class="dropdown-item" href="<?php echo RUTAPUBLIC; ?>/usuarios/inicio"><ion-icon name="person"></ion-icon> Administrar</a>
+                        <?php elseif($_SESSION['usr']->rol=="2"):?>
+                            <a class="dropdown-item" href="<?php echo RUTAPUBLIC; ?>/Pedido/confirmado"><ion-icon name="person"></ion-icon> Confirmado</a>
+                            <a class="dropdown-item" href="<?php echo RUTAPUBLIC; ?>/Pedido/index"><ion-icon name="person"></ion-icon> Pedidos</a>
+                            <a class="dropdown-item" href="<?php echo RUTAPUBLIC; ?>/Pedido/mis_pedidos"><ion-icon name="person"></ion-icon>Mis Pedidos</a>
+                        <?php elseif($_SESSION['usr']->rol=="3"):?>
+                            <a class="dropdown-item" href="<?php echo RUTAPUBLIC; ?>/usuarios/inicio"><ion-icon name="person"></ion-icon> Administrar</a>
+                        <?php endif ?> 
+                        <a class="dropdown-item" href="<?php echo RUTAPUBLIC; ?>/usuarios/salir"><ion-icon name="person"></ion-icon> Salir</a>                  
+                    </div>
                 </li>
-                    <?php if($_SESSION['usr']->rol=="1"):?>
-                    <?php elseif($_SESSION['usr']->rol=="2"):?>
-                    <?php elseif($_SESSION['usr']->rol=="3"):?>
-                    <?php endif ?>
-            <?php else: ?>
+                <?php endif ?>
                 <li class="nav-item">
                     <a class="nav-link" href="<?php echo RUTAPUBLIC; ?>/usuarios/index"><ion-icon name="home"></ion-icon></a>
                 </li>
@@ -40,9 +50,11 @@
                     </div>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link" href="<?php echo RUTAPUBLIC; ?>/Carrito/index"><ion-icon name="cart"></ion-icon>Carrito</a>
+                </li>
+                <li class="nav-item">
                 <a class="nav-link" href="<?php echo RUTAPUBLIC; ?>/usuarios/contacto"><ion-icon name="pricetags"></ion-icon> Contacto</a>
                 </li>
-            <?php endif ?>
         </ul>
         <!--/ul-->
 

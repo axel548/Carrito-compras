@@ -20,13 +20,13 @@
                                 <?php echo $getall->descripcion; ?>
                             </p>
                         </div>
-                        <button class="btn btn-primary btn-lg btn-block">Comprar</button>
+                        <a href="<?php echo RUTAPUBLIC; ?>/usuarios/getProduct/<?php echo $getall->id; ?>"class="btn btn-primary btn-lg btn-block">Ver producto</a>
                     </div>
                 </div>
                 <?php endforeach ?>
             </div>
             <?php else:?>
-            <h4 class="alert alert-warning">No hay imagenes</h4>
+            <h4 class="alert alert-warning">No hay productos</h4>
             <?php endif;?>
         </div>
     </div>

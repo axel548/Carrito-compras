@@ -10,7 +10,7 @@
                                     <p class="card-text">
                                         <?php echo $productos->descripcion; ?>
                                     </p>
-                                    <button class="btn btn-primary ">Comprar</button>
+                                    <button class="btn btn-primary ">Ver producto</button>
                                 </div>
                             </div>
                         </div>

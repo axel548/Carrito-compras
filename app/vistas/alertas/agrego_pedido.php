@@ -1,9 +1,9 @@
 <?php require RUTAAPP . '/vistas/include/header.php'; ?>
 
 <script>
-swal("Bienvenido")
+swal("Se agregó el pedido.")
 .then((value) => {
-  location.href = "<?php echo RUTAPUBLIC; ?>/usuarios/slider";
+  location.href = "<?php echo RUTAPUBLIC; ?>/pedido/confirmado";
 });
 </script>
 
