@@ -4,7 +4,7 @@
 define("HOST","localhost");
 define("USER","root");
 define("PASS","");
-define("NAME","axmvc");
+define("NAME","mvc");
 
 
 //variables server
